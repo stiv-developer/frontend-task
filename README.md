@@ -5,7 +5,7 @@ Este es el frontend del proyecto **Task Manager**, desarrollado en **Angular**.
 
 ### 👅 Clonar el repositorio  
 ```sh
-git clone <URL_DEL_REPO>
+git clone https://github.com/stiv-developer/frontend-task.git
 cd frontend-task
 ```
 
