@@ -1,0 +1,38 @@
+.container{
+    width: 300px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border: 1px solid black;
+    padding: 30px 10px;
+    border-radius: 10px;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.form-control input{
+    height: 20px;
+}
+
+.form-control .btn-login{
+    padding: 6px 0;
+    cursor: pointer;
+}
+
+.error-msg{
+    text-align: center;
+    color: red;
+    margin: 5px;
+}

@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>Registrar Task</h1>
+    <form [formGroup]="formTask" (ngSubmit)="createTask()">
+        <div class="form-control">
+            <label>Titulo</label>
+            <input type="text" formControlName="titulo">
+            <p *ngIf="formSubmitted && formTask.get('titulo')?.invalid" class="error-msg">*Mínimo 3 caracteres*</p>
+        </div>
+        <div class="form-control">
+            <label>Descripción</label>
+            <input type="text" formControlName="description">
+            <p *ngIf="formSubmitted && formTask.get('description')?.invalid" class="error-msg">*Mínimo 3 caracteres*</p>
+        </div>
+        <div class="form-control">
+            <label>Fecha de Vencimiento</label>
+            <input type="date" formControlName="fechaVencimiento">
+            <p *ngIf="formSubmitted && formTask.get('fechaVencimiento')?.invalid" class="error-msg">*Elegir Fecha de Vencimiento*</p>
+        </div>
+        <div class="form-control">
+            <label>Estado</label>
+            <select formControlName="estado">
+                <option value="pendiente">Pendiente</option>
+                <option value="completada">Completada</option>
+            </select>
+            <p *ngIf="formSubmitted && formTask.get('estado')?.invalid" class="error-msg">*Seleccionar Estado*</p>
+        </div>
+        <div class="form-control">
+            <button type="submit" class="btn-registrar">Registrar</button>
+            <button type="submit" class="btn-registrar" routerLink="/home">Regresar</button>
+        </div>
+    </form>
+</div>

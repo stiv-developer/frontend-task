@@ -1,0 +1,43 @@
+.container{
+    width: 300px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border: 1px solid black;
+    padding: 30px 10px;
+    border-radius: 10px;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.form-control input{
+    height: 20px;
+}
+
+.form-control select{
+    height: 30px;
+}
+
+.form-control .btn-actualizar{
+    padding: 6px 0;
+    cursor: pointer;
+}
+
+.error-msg{
+    color: red;
+    margin-top: 0;
+    margin-bottom: 2px;
+}

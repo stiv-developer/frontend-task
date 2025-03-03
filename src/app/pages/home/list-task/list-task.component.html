@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>Task</h1>
+    <div class="group-buttons">
+        <button class="btn-registrar" routerLink="/home/registrar">Add Tasks</button>
+    </div>
+    <table>
+        <tr>
+          <th>Titulo</th>
+          <th>Descripción</th>
+          <th>Fecha de Vencimiento</th>
+          <th>Estado</th>
+          <th>Opciones</th>
+        </tr>
+        <tr *ngFor="let task of tasks">
+          <td>{{task.titulo}}</td>
+          <td>{{task.description}}</td>
+          <td>{{task.fechaVencimiento | date:'dd-MM-yyyy'  }}</td>
+          <td>{{task.estado}}</td>
+          <td>
+            <button class="btn-actualizar" [routerLink]="['/home/actualizar', task.id]">Actualizar</button>
+            <button class="btn-eliminar" (click)="deleteTask(task.id)">Eliminar</button>
+          </td>
+        </tr>
+       
+      </table>
+</div>

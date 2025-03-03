@@ -1,0 +1,10 @@
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.menu .btn-salir{
+    padding: 8px 20px;
+    cursor: pointer;
+}

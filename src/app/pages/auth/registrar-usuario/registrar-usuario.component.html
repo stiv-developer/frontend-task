@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Registrar</h1>
+    <form [formGroup]="formUsuario" (ngSubmit)="createUsuario()">
+        <div class="form-control">
+            <label>Email</label>
+            <input type="text" formControlName="email">
+            <p *ngIf="formSubmitted && formUsuario.get('email')?.invalid" class="error-msg">
+                *Email incorrecto*
+            </p>
+        </div>
+        <div class="form-control">
+            <label>Password</label>
+            <input type="password" formControlName="password">
+            <p *ngIf="formSubmitted && formUsuario.get('password')?.invalid" class="error-msg">
+                *Mínimo 5 caracteres*
+            </p>
+        </div>
+        <div class="form-control">
+            <button type="submit" class="btn-registrar">Registrar</button>
+        </div>
+        <div class="form-control">
+            <a routerLink="/login">Login</a>
+        </div>
+    </form>
+</div>

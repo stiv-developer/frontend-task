@@ -1,27 +1,60 @@
-# FrontendTask
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
+## 🚀 Frontend Task - Angular  
 
-## Development server
+Este es el frontend del proyecto **Task Manager**, desarrollado en **Angular**.  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### 👅 Clonar el repositorio  
+```sh
+git clone <URL_DEL_REPO>
+cd frontend-task
+```
 
-## Code scaffolding
+### 👥 Instalación de dependencias  
+Ejecuta el siguiente comando para instalar todas las dependencias necesarias:  
+```sh
+npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 🔧 Configuración del entorno  
+Asegúrarte de configurar correctamente el archivo `environment.prod.ts`.  
 
-## Build
+```env
+export const environment = {
+  production: true,
+  apiUrl: 'http://localhost:3000'
+};
+```
+> **Nota:** Si estás usando Docker, cambia la URL del backend en este archivo.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### ▶️ Ejecutar el proyecto en desarrollo  
+```sh
+ng serve
+```
+Esto iniciará el servidor en `http://localhost:4200/login`.
 
-## Running unit tests
+Esto generará los archivos de la aplicación en la carpeta `dist/frontend-task`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 🐓 Ejecutar con Docker  
+```sh
+docker build -t frontend-task .
+docker run -p 4200:4200 frontend-task
+```
 
-## Running end-to-end tests
+### 📂 Estructura del proyecto  
+```
+frontend-task/
+│── src/
+│   ├── app/          # Componentes principales
+│   ├── assets/       # Recursos estáticos (imágenes, estilos)
+│   ├── environments/ # Archivos de configuración de entorno
+│── angular.json      # Configuración de Angular
+│── package.json      # Dependencias del proyecto
+│── README.md         # Documentación
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### ✅ Verificar que la app está corriendo  
+Abre tu navegador y ve a:  
+```
+http://localhost:4200/login
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
